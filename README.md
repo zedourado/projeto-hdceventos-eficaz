@@ -81,6 +81,9 @@ npm run dev</code></pre>
     <pre><code>cp .env.example .env
 php artisan key:generate</code></pre>
   </li>
+    <li>Crie o banco de dados:
+    <pre><code>create database laravel</code></pre>
+  </li>
   <li>Execute as migrations:
     <pre><code>php artisan migrate</code></pre>
   </li>

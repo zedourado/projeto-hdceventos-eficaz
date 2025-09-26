@@ -92,6 +92,11 @@ php artisan key:generate</code></pre>
     <li>Crie o banco de dados:
     <pre><code>create database laravel</code></pre>
   </li>
+  </li>
+    <li>Execute o Seeder para criar o Usuário Admin:
+    <pre><code>php artisan db:seed --class=AdminSeeder</code></pre>
+    <span><strong>User:</strong> admin@hdcevents.com -- <strong>Senha:</strong> password </span>
+  </li>
   <li>Execute as migrations:
     <pre><code>php artisan migrate</code></pre>
   </li>

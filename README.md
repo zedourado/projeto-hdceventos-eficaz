@@ -89,8 +89,16 @@ npm run dev</code></pre>
     <pre><code>cp .env.example .env
 php artisan key:generate</code></pre>
   </li>
-    <li>Crie o banco de dados:
-    <pre><code>create database laravel</code></pre>
+  <li>Instale/Execute o XAMPP/Laragon: https://www.apachefriends.org/pt_br/download.html
+  </li>
+  <li>Crie o banco de dados:
+    <pre>
+      <code>
+        CREATE DATABASE laravel
+        CHARACTER SET utf8mb4
+        COLLATE utf8mb4_unicode_ci;
+      </code>
+    </pre>
   </li>
   </li>
     <li>Execute o Seeder para criar o Usuário Admin:

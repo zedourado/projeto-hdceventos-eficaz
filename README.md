@@ -4,19 +4,27 @@
 <p>Este projeto foi desenvolvido como parte de um processo seletivo, com o objetivo de avaliar conhecimentos em <strong>Laravel</strong>, <strong>Blade</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, boas práticas de código, tratamento de erros, GitHub e capacidade técnica e criativa para implementar novas funcionalidades em cima de uma base existente.</p>
 <p>A aplicação permite o cadastro e login de usuários, criação, edição e exclusão de eventos, inscrição de usuários nos eventos, além de exibir notificações e um dashboard personalizado.</p>
 
-<h2>Funcionalidades Implementadas</h2>
+<h2>Funcionalidades</h2>
+
+<h3>Padrão da Base (Projeto Curso Hora de Codar):</h3>
+
 <ul>
   <li>Cadastro de usuários e autenticação (login/logout).</li>
+  <li>Criação, edição e exclusão de eventos.</li>
+  <li>Inscrição e saída de eventos pelos usuários.</li>
+  <li>Visualização de todos os eventos com filtro por título.</li>
+  <li>Dashboard do usuário com eventos cadastrados e eventos que participa.</li>
+</ul>
+
+<h3>Funcionalidades Implementadas (Solicitados no Projeto):</h3>
+
+<ul>
   <li>Diferenciação de <strong>níveis de usuários</strong> (admin e usuário comum) para permissões específicas:
     <ul>
       <li>Admin pode criar, editar e excluir eventos.</li>
       <li>Usuários comuns podem se inscrever em eventos.</li>
     </ul>
   </li>
-  <li>Criação, edição e exclusão de eventos.</li>
-  <li>Inscrição e saída de eventos pelos usuários.</li>
-  <li>Dashboard do usuário com eventos cadastrados e eventos que participa.</li>
-  <li>Visualização de todos os eventos com filtro por título.</li>
   <li>Retorno dos dados dos eventos via <strong>API</strong> (rota <code>/api/events</code> disponível).</li>
   <li>Notificações em tempo real para:
     <ul>
@@ -98,7 +106,7 @@ php artisan key:generate</code></pre>
   <li><strong>Eventos:</strong> Criação, edição, exclusão e listagem de eventos.</li>
   <li><strong>Inscrição em Eventos:</strong> Usuários podem se inscrever e sair de eventos.</li>
   <li><strong>Dashboard do Usuário:</strong> Eventos cadastrados e eventos que participa.</li>
-  <li><strong>Notificações:</strong> Sistema de notificações em tempo real com badge.</li>
+  <li><strong>Notificações:</strong> Sistema de notificações em tempo real com badge e marcação de notificações lidas.</li>
   <li><strong>Responsividade:</strong> Funciona em diferentes tamanhos de tela.</li>
   <li><strong>API:</strong> Retorno de eventos via rota <code>/api/events</code>.</li>
 </ul>

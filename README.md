@@ -1,88 +1,108 @@
-# 🚀 Projeto Laravel - Curso Básico | Hora de Codar
+<h1>HDC Eventos - Versão Eficaz</h1>
 
-Este repositório contém o projeto desenvolvido durante o **Curso Básico de Laravel** ministrado por [Matheus Battisti](https://github.com/matheusbattisti) do canal [Hora de Codar](https://www.youtube.com/@horadecodar).  
-O objetivo foi aprender os fundamentos do framework **Laravel** e construir uma aplicação funcional utilizando as tecnologias web mais comuns.
+<h2>Descrição do Projeto</h2>
+<p>Este projeto foi desenvolvido como parte de um processo seletivo, com o objetivo de avaliar conhecimentos em <strong>Laravel</strong>, <strong>Blade</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, boas práticas de código, tratamento de erros, GitHub e capacidade técnica e criativa para implementar novas funcionalidades em cima de uma base existente.</p>
+<p>A aplicação permite o cadastro e login de usuários, criação, edição e exclusão de eventos, inscrição de usuários nos eventos, além de exibir notificações e um dashboard personalizado.</p>
 
----
+<h2>Funcionalidades Implementadas</h2>
+<ul>
+  <li>Cadastro de usuários e autenticação (login/logout).</li>
+  <li>Diferenciação de <strong>níveis de usuários</strong> (admin e usuário comum) para permissões específicas:
+    <ul>
+      <li>Admin pode criar, editar e excluir eventos.</li>
+      <li>Usuários comuns podem se inscrever em eventos.</li>
+    </ul>
+  </li>
+  <li>Criação, edição e exclusão de eventos.</li>
+  <li>Inscrição e saída de eventos pelos usuários.</li>
+  <li>Dashboard do usuário com eventos cadastrados e eventos que participa.</li>
+  <li>Visualização de todos os eventos com filtro por título.</li>
+  <li>Retorno dos dados dos eventos via <strong>API</strong> (rota <code>/api/events</code> disponível).</li>
+  <li>Notificações em tempo real para:
+    <ul>
+      <li>Novos eventos (exceto para o criador do evento)</li>
+      <li>Atualização de eventos (para participantes, exceto o criador)</li>
+      <li>Cancelamento de eventos (para participantes, exceto o criador)</li>
+      <li>Inscrição e saída de eventos</li>
+    </ul>
+  </li>
+  <li>Responsividade completa para desktop e mobile.</li>
+  <li>Páginas referentes à conta do usuário: editar dados, alterar senha.</li>
+</ul>
 
-## 🛠️ Tecnologias Utilizadas
+<h2>Tecnologias Utilizadas</h2>
+<ul>
+  <li><strong>Backend:</strong> Laravel 10</li>
+  <li><strong>Frontend:</strong> Blade, HTML, CSS, JavaScript</li>
+  <li><strong>Banco de Dados:</strong> MySQL (padrão Laravel)</li>
+  <li><strong>Controle de Versão:</strong> Git + GitHub</li>
+</ul>
 
-<div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML5" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" title="CSS3" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" title="Laravel" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" title="PHP" width="40" height="40"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" title="MySQL" width="40" height="40"/>
-</div>
+<h2>Estrutura do Projeto</h2>
+<pre>
+app/
+├─ Http/
+│  ├─ Controllers/
+│  │  ├─ EventController.php
+│  │  ├─ AccountController.php
+│  │  └─ NotificationController.php
+│  └─ Middleware/
+│     └─ Admin.php
+├─ Models/
+│  ├─ Event.php
+│  ├─ User.php
+│  └─ Notification.php
+database/
+├─ migrations/
+├─ seeders/
+resources/
+├─ views/
+│  ├─ events/
+│  ├─ account/
+│  └─ layouts/
+public/
+├─ img/
+│  ├─ events/
+│  └─ profiles/
+</pre>
 
----
+<h2>Instalação e Configuração</h2>
+<ol>
+  <li>Clone o repositório:
+    <pre><code>git clone https://github.com/zedourado/projeto-hdceventos-eficaz.git
+cd projeto-hdceventos-eficaz</code></pre>
+  </li>
+  <li>Instale as dependências:
+    <pre><code>composer install
+npm install
+npm run dev</code></pre>
+  </li>
+  <li>Configure o <code>.env</code> com seu banco de dados e chave de aplicação:
+    <pre><code>cp .env.example .env
+php artisan key:generate</code></pre>
+  </li>
+  <li>Execute as migrations:
+    <pre><code>php artisan migrate</code></pre>
+  </li>
+  <li>Inicie o servidor:
+    <pre><code>php artisan serve</code></pre>
+    <p>Acesse a aplicação em: <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a></p>
+  </li>
+</ol>
 
-## 📌 Funcionalidades
+<h2>Demonstração das Funcionalidades</h2>
+<ul>
+  <li><strong>Eventos:</strong> Criação, edição, exclusão e listagem de eventos.</li>
+  <li><strong>Inscrição em Eventos:</strong> Usuários podem se inscrever e sair de eventos.</li>
+  <li><strong>Dashboard do Usuário:</strong> Eventos cadastrados e eventos que participa.</li>
+  <li><strong>Notificações:</strong> Sistema de notificações em tempo real com badge.</li>
+  <li><strong>Responsividade:</strong> Funciona em diferentes tamanhos de tela.</li>
+  <li><strong>API:</strong> Retorno de eventos via rota <code>/api/events</code>.</li>
+</ul>
 
-- 🔍 CRUD completo com Laravel
-- 🖥️ Interface simples e responsiva com HTML5 + CSS3
-- 💾 Persistência de dados com MySQL
-- 🧱 Estrutura MVC
-- ⚙️ Uso de rotas, controllers, migrations, seeders, e muito mais!
-
----
-
-## 📷 Screenshots
-
-### 🏠 Tela Inicial
-![Tela Inicial](screenshots/homepage.png)
-
-### ➕ Cadastro
-![Tela de Cadastro](screenshots/add_event.png)
-
-### 🖥️ Dashboard
-![Tela de Cadastro](screenshots/dashboard.png)
-
-### 🔍 View Evento
-![Tela de Cadastro](screenshots/show-event.png)
-
----
-
-## 📚 Créditos
-
-Projeto desenvolvido como parte do curso **"Laravel Básico"** oferecido por **Matheus Battisti - Hora de Codar**.  
-Confira o canal: [📺 Hora de Codar](https://www.youtube.com/@horadecodar)
-
----
-
-## 📦 Como rodar o projeto
-
-# Clone o repositório
-git clone https://github.com/zedourado/projeto-laravel.git
-
-# Acesse o diretório do projeto
-cd projeto-laravel
-
-# Instale as dependências
-composer install
-
-# Configure o arquivo .env
-cp .env.example .env
-
-# Gere a chave da aplicação
-php artisan key:generate
-
-# Crie o banco de dados e execute as migrations
-php artisan migrate
-
-# Inicie o servidor local
-php artisan serve
-```
-
----
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Fique à vontade para abrir uma *issue* ou enviar um *pull request*.
-
----
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT.
-```
+<h2>Autor</h2>
+<p><strong>José Roberto Dourado Junior</strong></p>
+<ul>
+  <li>GitHub: <a href="https://github.com/zedourado">https://github.com/zedourado</a></li>
+  <li>Projeto desenvolvido para apresentação em processo seletivo.</li>
+</ul>
